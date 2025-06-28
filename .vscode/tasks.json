@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build abl2rel",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "abl2rel.cpp",
+        "resource.o",
+        "-o",
+        "abl2rel.exe",
+        "-IC:/Qt/6.9.1/mingw_64/include",
+        "-IC:/Qt/6.9.1/mingw_64/include/QtWidgets",
+        "-IC:/Qt/6.9.1/mingw_64/include/QtGui",
+        "-IC:/Qt/6.9.1/mingw_64/include/QtCore",
+        "-LC:/Qt/6.9.1/mingw_64/lib",
+        "-lQt6Widgets",
+        "-lQt6Gui",
+        "-lQt6Core",
+        "-mwindows"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
