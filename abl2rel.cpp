@@ -13,14 +13,17 @@
 #include<QPlainTextEdit>
 #include<QIcon>
 #include<QDir>
-
+#include "resource.h"
 class M3UEditor : public QWidget {
     Q_OBJECT
 
 public:
     M3UEditor(QWidget *parent = nullptr) : QWidget(parent) {
         setWindowTitle("Nazuna M3U Editor 😎");
-        setWindowIcon(QIcon(QCoreApplication::applicationDirPath() + "/icon.ico"));
+        QIcon icon("icon.ico");
+        if (!icon.isNull()) {
+            setWindowIcon(icon);
+        }
         resize(800, 600);
         setMinimumSize(600, 400);
 
